@@ -1,0 +1,3 @@
+ENV = "debug"
+Port = "8080"
+Sqlite = "sqlite"

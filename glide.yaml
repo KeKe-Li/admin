@@ -1,0 +1,25 @@
+package: admin
+import:
+  vcs: git
+- package: github.com/BurntSushi/toml
+- package: github.com/fvbock/endless
+- package: github.com/garyburd/redigo
+  subpackages:
+  - redis
+- package: github.com/gin-gonic/contrib
+  subpackages:
+  - sessions
+  - static
+- package: github.com/gin-gonic/gin
+- package: github.com/jinzhu/gorm
+- package: github.com/unrolled/render
+- package: golang.org/x/crypto/bcrypt
+  repo:    git@github.com:golang/crypto.git
+  vcs:     git
+- package: golang.org/x/net/context
+  repo:    git@github.com:golang/net.git
+  vcs:     git
+- package: github.com/qiniu/api.v7
+  subpackages:
+  - kodo
+  - kodocli

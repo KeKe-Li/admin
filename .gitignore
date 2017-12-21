@@ -1,0 +1,11 @@
+.idea
+*.conf
+api
+gin-bin
+*.tar.gz
+*.sh
+.DS_Store
+*.pid
+mobile-api
+.glide
+vendor
