@@ -6,6 +6,7 @@ import (
 
 	"admin/config"
 	"admin/controllers"
+	"admin/routes"
 	et "admin/helpers/template"
 
 	"github.com/gin-gonic/gin"
@@ -58,7 +59,7 @@ func main() {
 	})
 
 	adminRouter := router.Group("/")
-	InitRoutes(adminRouter, appCtrl)
+	routes.InitRoutes(adminRouter, appCtrl)
 	//权限
 	if gin.Mode() == "release" {
 		basicAuth := adminRouter.Group("/authority", gin.BasicAuth(gin.Accounts{
