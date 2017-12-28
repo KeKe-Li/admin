@@ -7,14 +7,14 @@ ADD centrifugo /usr/bin/centrifugo
 RUN echo "centrifugo - nofile 65536" >> /etc/security/limits.d/centrifugo.nofiles.conf
 
 RUN groupadd -r centrifugo && useradd -r -g centrifugo centrifugo
-
+# 编译应用，内容详见后面
 RUN mkdir /centrifugo && chown centrifugo:centrifugo /centrifugo && \
     mkdir /var/log/centrifugo && chown centrifugo:centrifugo /var/log/centrifugo
-
+# 创建一个存放运行时数据的磁盘卷
 VOLUME ["/centrifugo", "/var/log/centrifugo"]
 
 WORKDIR /centrifugo
 
 USER centrifugo
-
+# 对外暴露应用服务监听端口
 EXPOSE 8000

@@ -9,7 +9,8 @@ import (
 
 	"admin/models"
 	"admin/config"
-	"gopher/configurations"
+	"payment/helpers/configurations"
+
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"

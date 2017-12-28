@@ -3,10 +3,9 @@ package config
 import (
 	"fmt"
 
-	"gopher/configurations"
-	"gopher/utils/notification/push"
-	"gopher/utils/qiniu"
+	"payment/helpers/configurations"
 
+	"payment/helpers/utils/qiniu"
 )
 
 type ApplicationConfig struct {
@@ -18,7 +17,6 @@ type ApplicationConfig struct {
 	WechatPay    *configurations.WechatPay
 	//Mysql        *configurations.Mysql
 	Sqlite       string
-	UMeng        *push.UMengService
 }
 
 // 通过BUCKET获取对应七牛配置
