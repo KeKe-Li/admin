@@ -1,4 +1,4 @@
-### golang 做的web 后台控制系统
+### golang 做的admin后台控制系统
 
 
 #### 技术选型
